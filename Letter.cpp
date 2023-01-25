@@ -39,6 +39,9 @@ void Letter::draw(SDL_Renderer* renderer)
 	case wrong:
 		SDL_SetTextureColorMod(circle, 0x80, 0x20, 0x20);
 		break;
+	case selected:
+		SDL_SetTextureColorMod(circle, 0x40, 0x40, 0xb0);
+		break;
 	}
 	SDL_RenderCopy(renderer, circle, NULL, &circleRect);
 	SDL_RenderCopy(renderer, texture, NULL, &charRect);

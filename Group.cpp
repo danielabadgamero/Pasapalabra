@@ -57,6 +57,7 @@ void Group::drawGui(SDL_Point windowSize, int* turn, double dt)
 	if (running)
 	{
 		timeLeft -= dt;
+		currentLetter->setStatus(2);
 
 		ImGui::SetNextWindowPos({ windowSize.x * 0.5f, windowSize.y * 0.9f }, 0, { 0.5f, 0.5f });
 		ImGui::SetNextWindowSize({ windowSize.x * 0.75f, windowSize.y * 0.1f });
@@ -76,6 +77,7 @@ void Group::drawGui(SDL_Point windowSize, int* turn, double dt)
 		ImGui::PushStyleColor(ImGuiCol_Button, { 0x20 / 255.0f, 0x20 / 255.0f, 0x80 / 255.0f, 1.0f });
 		if (ImGui::Button("Pasapalabra", { 200.0f, 50.0f }))
 		{
+			currentLetter->setStatus(0);
 			if (currentLetter == circle.end())
 				currentLetter = circle.begin();
 			else

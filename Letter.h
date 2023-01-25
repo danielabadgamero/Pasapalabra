@@ -21,6 +21,7 @@ private:
 	{
 		pass = 0,
 		right = 1,
+		selected = 2,
 		wrong = -1
 	} status{};
 public:
