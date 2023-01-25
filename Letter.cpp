@@ -40,7 +40,7 @@ void Letter::draw(SDL_Renderer* renderer)
 		SDL_SetTextureColorMod(circle, 0x80, 0x20, 0x20);
 		break;
 	case selected:
-		SDL_SetTextureColorMod(circle, 0x40, 0x40, 0xb0);
+		SDL_SetTextureColorMod(circle, 0x40, 0x40, 0xff);
 		break;
 	}
 	SDL_RenderCopy(renderer, circle, NULL, &circleRect);
