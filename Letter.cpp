@@ -27,8 +27,20 @@ Letter::Letter(SDL_Renderer* renderer, char letter, SDL_Point position, std::str
 
 void Letter::draw(SDL_Renderer* renderer)
 {
-	SDL_RenderCopy(renderer, texture, NULL, &charRect);
+	switch (status)
+	{
+	case pass:
+		SDL_SetTextureColorMod(circle, 0x20, 0x20, 0x80);
+		break;
+	case right:
+		SDL_SetTextureColorMod(circle, 0x20, 0x80, 0x20);
+		break;
+	case wrong:
+		SDL_SetTextureColorMod(circle, 0x80, 0x20, 0x20);
+		break;
+	}
 	SDL_RenderCopy(renderer, circle, NULL, &circleRect);
+	SDL_RenderCopy(renderer, texture, NULL, &charRect);
 }
 
 void Letter::move(SDL_Point position)
