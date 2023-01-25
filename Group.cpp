@@ -27,10 +27,14 @@ void Group::draw(SDL_Renderer* renderer)
 void Group::drawGui(SDL_Point windowSize, int* turn, double dt)
 {
 	ImGui::SetNextWindowPos({ windowSize.x * 0.5f, windowSize.y * 0.1f }, 0, { 0.5, 0.5 });
-	ImGui::Begin("header", NULL, headerFlags);
+	ImGui::Begin("header", NULL, windowFlags);
 	ImGui::Text("Grupo %d", *turn);
 	ImGui::End();
 
+	ImGui::SetNextWindowPos({ windowSize.x * 0.9f, windowSize.y * 0.9f }, 0, { 0.5, 0.5 });
+	ImGui::Begin("timer", NULL, windowFlags);
+	ImGui::TextColored({ (200.0f - static_cast<float>(timeLeft)) / 200.0f, static_cast<float>(timeLeft) / 200.0f, 0, 1.0f }, "%d", static_cast<int>(timeLeft));
+	ImGui::End();
 
 }
 

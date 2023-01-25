@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 	{
 		previousTime = currentTime;
 		currentTime = SDL_GetTicks() / 1000.0;
-		deltaTime = previousTime - currentTime;
+		deltaTime = currentTime - previousTime;
 		while (SDL_PollEvent(&e))
 		{
 			ImGui_ImplSDL2_ProcessEvent(&e);

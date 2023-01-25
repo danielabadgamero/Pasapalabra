@@ -10,9 +10,10 @@
 class Group
 {
 private:
-	ImGuiWindowFlags headerFlags{ ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground };
+	ImGuiWindowFlags windowFlags{ ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground };
 	std::vector<Letter> circle{};
 	double timeLeft{};
+	bool running{};
 public:
 	Group(SDL_Renderer*, SDL_Point, int);
 	void draw(SDL_Renderer*);
