@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-std::vector<std::vector<std::string[2]>> definitions
+std::vector<std::vector<std::string>> definitions[2]
 {
 	// Group 1
 	{
