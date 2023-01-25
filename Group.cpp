@@ -23,6 +23,14 @@ void Group::draw(SDL_Renderer* renderer)
 		letter.draw(renderer);
 }
 
+void Group::drawGui(SDL_Point windowSize, int* turn)
+{
+	ImGui::SetNextWindowPos({ windowSize.x * 0.5f, windowSize.y * 0.1f }, 0, { 0.5, 0.5 });
+	ImGui::Begin("header", NULL, headerFlags);
+	ImGui::Text("Grupo %d", *turn);
+	ImGui::End();
+}
+
 void Group::resize(SDL_Point windowSize)
 {
 	for (char c{ 'A' }; c <= 'Z'; c++)

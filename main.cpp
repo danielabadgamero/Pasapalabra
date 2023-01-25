@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
 	ImGuiIO& io{ ImGui::GetIO() }; (void)io;
 	ImGui_ImplSDL2_InitForSDLRenderer(window, renderer);
 	ImGui_ImplSDLRenderer_Init(renderer);
+	io.Fonts->AddFontFromFileTTF("font.ttf", 25);
 
 	Group A{ renderer, windowSize, 1 };
 	Group B{ renderer, windowSize, 2 };
@@ -57,7 +58,6 @@ int main(int argc, char* argv[])
 		ImGui_ImplSDLRenderer_NewFrame();
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
-		ImGui::Render();
 		SDL_SetRenderDrawColor(renderer, 0x10, 0x10, 0x10, 0xFF);
 		SDL_RenderClear(renderer);
 		
@@ -65,12 +65,15 @@ int main(int argc, char* argv[])
 		{
 		case 1:
 			A.draw(renderer);
+			A.drawGui(windowSize, &turn);
 			break;
 		case 2:
 			B.draw(renderer);
+			B.drawGui(windowSize, &turn);
 			break;
 		}
 
+		ImGui::Render();
 		ImGui_ImplSDLRenderer_RenderDrawData(ImGui::GetDrawData());
 		SDL_RenderPresent(renderer);
 	}
