@@ -32,6 +32,8 @@ int main(int argc, char* argv[])
 	Group A{ renderer, windowSize, 1 };
 	Group B{ renderer, windowSize, 2 };
 
+	int turn{ 1 };
+
 	bool isRunning{ true };
 	while (isRunning)
 	{
@@ -46,6 +48,8 @@ int main(int argc, char* argv[])
 				break;
 			case SDL_WINDOWEVENT:
 				SDL_GetWindowSize(window, &windowSize.x, &windowSize.y);
+				A.resize(windowSize);
+				B.resize(windowSize);
 				break;
 			}
 		}
@@ -56,9 +60,16 @@ int main(int argc, char* argv[])
 		ImGui::Render();
 		SDL_SetRenderDrawColor(renderer, 0x10, 0x10, 0x10, 0xFF);
 		SDL_RenderClear(renderer);
-
-		A.draw(renderer);
-		B.draw(renderer);
+		
+		switch (turn)
+		{
+		case 1:
+			A.draw(renderer);
+			break;
+		case 2:
+			B.draw(renderer);
+			break;
+		}
 
 		ImGui_ImplSDLRenderer_RenderDrawData(ImGui::GetDrawData());
 		SDL_RenderPresent(renderer);

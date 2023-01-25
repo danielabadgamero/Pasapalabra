@@ -12,6 +12,7 @@ private:
 public:
 	Group(SDL_Renderer*, SDL_Point, int);
 	void draw(SDL_Renderer*);
+	void resize(SDL_Point);
 };
 
 #endif

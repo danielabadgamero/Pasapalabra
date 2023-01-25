@@ -9,7 +9,9 @@ class Letter
 {
 private:
 	SDL_Texture* texture{};
-	SDL_Rect rect{};
+	SDL_Texture* circle{};
+	SDL_Rect charRect{};
+	SDL_Rect circleRect{};
 
 	std::string definition{};
 	std::string answer{};
@@ -23,6 +25,7 @@ private:
 public:
 	Letter(SDL_Renderer*, char, SDL_Point, std::string, std::string);
 	void draw(SDL_Renderer*);
+	void move(SDL_Point);
 };
 
 #endif
