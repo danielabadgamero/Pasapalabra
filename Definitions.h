@@ -4,220 +4,220 @@
 #include <vector>
 #include <string>
 
-std::vector<std::vector<std::string>> definitions[2]
+std::vector<std::vector<std::u8string>> definitions[2]
 {
 	// Group 1
 	{
 		{
-			"A word",
-			"A def"
+			u8"Agrario",
+			u8"(adj). Ámbito de la economía relacionado con el campesinado y el trabajo de los campos."
 		},
 		{
-			"B word",
-			"B def"
+			u8"Bolchevique",
+			u8"Perteneciente al POSDR."
 		},
 		{
-			"C word",
-			"C def"
+			u8"Canadiense, La",
+			u8"Principal suministradora energética de Barcelona, la CNT decreta una huelga en esta empresa en 1919."
 		},
 		{
-			"D word",
-			"D def"
+			u8"Desastre de Annual",
+			u8"Otra gran derrota militar más."
 		},
 		{
-			"E word",
-			"E def"
+			u8"España",
+			u8"País en el que se desarrolla la mayor parte de los sucesos narrados."
 		},
 		{
-			"F word",
-			"F def"
+			u8"F word",
+			u8"F def"
 		},
 		{
-			"G word",
-			"G def"
+			u8"G word",
+			u8"G def"
 		},
 		{
-			"H word",
-			"H def"
+			u8"H word",
+			u8"H def"
 		},
 		{
-			"I word",
-			"I def"
+			u8"Iglesias",
+			u8"(pl). Víctimas de las revueltas en Barcelona."
 		},
 		{
-			"J word",
-			"J def"
+			u8"J word",
+			u8"J def"
 		},
 		{
-			"K word",
-			"K def"
+			u8"K word",
+			u8"K def"
 		},
 		{
-			"L word",
-			"L def"
+			u8"L word",
+			u8"L def"
 		},
 		{
-			"M word",
-			"M def"
+			u8"M word",
+			u8"M def"
 		},
 		{
-			"N word",
-			"N def"
+			u8"N word",
+			u8"N def"
 		},
 		{
-			"O word",
-			"O def"
+			u8"O word",
+			u8"O def"
 		},
 		{
-			"P word",
-			"P def"
+			u8"Pistolerismo",
+			u8"Práctica introducida por las tensiones entre la Patronal y los trabajadores. Consistía en la contratación de asesinos a sueldo para resolver las revueltas mediante la violencia."
 		},
 		{
-			"Q word",
-			"Q def"
+			u8"Q word",
+			u8"Q def"
 		},
 		{
-			"R word",
-			"R def"
+			u8"R word",
+			u8"R def"
 		},
 		{
-			"S word",
-			"S def"
+			u8"S word",
+			u8"S def"
 		},
 		{
-			"T word",
-			"T def"
+			u8"T word",
+			u8"T def"
 		},
 		{
-			"U word",
-			"U def"
+			u8"U word",
+			u8"U def"
 		},
 		{
-			"V word",
-			"V def"
+			u8"V word",
+			u8"V def"
 		},
 		{
-			"W word",
-			"W def"
+			u8"W word",
+			u8"W def"
 		},
 		{
-			"X word",
-			"X def"
+			u8"X word",
+			u8"X def"
 		},
 		{
-			"Y word",
-			"Y def"
+			u8"Y word",
+			u8"Y def"
 		},
 		{
-			"Z word",
-			"Z def"
+			u8"Z word",
+			u8"Z def"
 		}
 	},
 	// Group 2
 	{
 		{
-			"A word",
-			"A def"
+			u8"Andalucía",
+			u8"Comunidad Autónoma en la que, sin ser extremeños, existía tensiones entre el campesinado."
 		},
 		{
-			"B word",
-			"B def"
+			u8"B word",
+			u8""
 		},
 		{
-			"C word",
-			"C def"
+			u8"CNT",
+			u8"Sindicato representativo del anarquismo."
 		},
 		{
-			"D word",
-			"D def"
+			u8"D word",
+			u8""
 		},
 		{
-			"E word",
-			"E def"
+			u8"E word",
+			u8"E def"
 		},
 		{
-			"F word",
-			"F def"
+			u8"F word",
+			u8"F def"
 		},
 		{
-			"G word",
-			"G def"
+			u8"G word",
+			u8"G def"
 		},
 		{
-			"H word",
-			"H def"
+			u8"Huelga",
+			u8"La CNT las decretaba."
 		},
 		{
-			"I word",
-			"I def"
+			u8"I word",
+			u8"I def"
 		},
 		{
-			"J word",
-			"J def"
+			u8"J word",
+			u8"J def"
 		},
 		{
-			"K word",
-			"K def"
+			u8"K word",
+			u8"K def"
 		},
 		{
-			"L word",
-			"L def"
+			u8"L word",
+			u8"L def"
 		},
 		{
-			"M word",
-			"M def"
+			u8"M word",
+			u8"M def"
 		},
 		{
-			"N word",
-			"N def"
+			u8"N word",
+			u8"N def"
 		},
 		{
-			"O word",
-			"O def"
+			u8"O word",
+			u8"O def"
 		},
 		{
-			"P word",
-			"P def"
+			u8"Partidos dinásticos",
+			u8"Grupos políticos que se turnaban en el poder durante la Restauración."
 		},
 		{
-			"Q word",
-			"Q def"
+			u8"Quemar",
+			u8"Iglesias."
 		},
 		{
-			"R word",
-			"R def"
+			u8"R word",
+			u8"R def"
 		},
 		{
-			"S word",
-			"S def"
+			u8"S word",
+			u8"S def"
 		},
 		{
-			"T word",
-			"T def"
+			u8"T word",
+			u8"T def"
 		},
 		{
-			"U word",
-			"U def"
+			u8"U word",
+			u8"U def"
 		},
 		{
-			"V word",
-			"V def"
+			u8"V word",
+			u8"V def"
 		},
 		{
-			"W word",
-			"W def"
+			u8"W word",
+			u8"W def"
 		},
 		{
-			"X word",
-			"X def"
+			u8"X word",
+			u8"X def"
 		},
 		{
-			"Y word",
-			"Y def"
+			u8"Y word",
+			u8"Y def"
 		},
 		{
-			"Z word",
-			"Z def"
+			u8"Z word",
+			u8"Z def"
 		}
 	},
 };

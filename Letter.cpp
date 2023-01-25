@@ -4,7 +4,8 @@
 
 #include "Letter.h"
 
-Letter::Letter(SDL_Renderer* renderer, char letter, SDL_Point position, std::string answer, std::string definition) : answer{ answer }, definition{ definition }
+Letter::Letter(SDL_Renderer* renderer, char letter, SDL_Point position, std::u8string answer, std::u8string definition)
+	: answer{ answer }, definition{ definition }, letter{ letter }
 {
 	TTF_Font* font{ TTF_OpenFont("font.ttf", 20) };
 
@@ -50,4 +51,24 @@ void Letter::move(SDL_Point position)
 
 	circleRect.x = position.x - circleRect.w / 2;
 	circleRect.y = position.y - circleRect.h / 2;
+}
+
+char Letter::getLetter()
+{
+	return letter;
+}
+
+std::u8string Letter::getDefinition()
+{
+	return definition;
+}
+
+void Letter::setStatus(int st)
+{
+	status = static_cast<Status>(st);
+}
+
+int Letter::getStatus()
+{
+	return static_cast<int>(status);
 }

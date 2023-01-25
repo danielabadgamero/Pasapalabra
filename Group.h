@@ -10,8 +10,9 @@
 class Group
 {
 private:
-	ImGuiWindowFlags windowFlags{ ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground };
+	ImGuiWindowFlags windowFlags{ ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_NoBackground | ImGuiWindowFlags_AlwaysAutoResize };
 	std::vector<Letter> circle{};
+	std::vector<Letter>::iterator currentLetter{};
 	double timeLeft{};
 	bool running{};
 public:
