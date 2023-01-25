@@ -9,7 +9,8 @@
 #include "Group.h"
 
 int main(int argc, char* argv[])
-{	argc; argv;
+{
+	argc; argv;
 
 	SDL_Init(SDL_INIT_EVERYTHING);
 	IMG_Init(IMG_INIT_PNG);
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
 
 	window = SDL_CreateWindow("Pasapalabra", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, windowSize.x, windowSize.y, SDL_WINDOW_MAXIMIZED | SDL_WINDOW_RESIZABLE);
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	
+
 	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 	ImGuiIO& io{ ImGui::GetIO() }; (void)io;
@@ -35,9 +36,16 @@ int main(int argc, char* argv[])
 
 	int turn{ 1 };
 
+	double previousTime{};
+	double currentTime{};
+	double deltaTime{};
+
 	bool isRunning{ true };
 	while (isRunning)
 	{
+		previousTime = currentTime;
+		currentTime = SDL_GetTicks() / 1000.0;
+		deltaTime = previousTime - currentTime;
 		while (SDL_PollEvent(&e))
 		{
 			ImGui_ImplSDL2_ProcessEvent(&e);
@@ -65,11 +73,11 @@ int main(int argc, char* argv[])
 		{
 		case 1:
 			A.draw(renderer);
-			A.drawGui(windowSize, &turn);
+			A.drawGui(windowSize, &turn, deltaTime);
 			break;
 		case 2:
 			B.draw(renderer);
-			B.drawGui(windowSize, &turn);
+			B.drawGui(windowSize, &turn, deltaTime);
 			break;
 		}
 
